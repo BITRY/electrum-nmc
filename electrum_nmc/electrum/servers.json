@@ -1,13 +1,18 @@
 {
-    "txserver.live": {
+    "electrumxprux02.sytes.net": {
         "pruning": "-",
+        "t": "50001",
         "s": "50002",
+        "version": "1.4"
+    },
+    "electrumxprux01.ddns.net": {
+        "pruning": "-",
+        "t": "50010",
         "version": "1.4"
     },
     "txserver.live": {
         "pruning": "-",
         "s": "50002",
-        "t": "50001",
         "version": "1.4"
     }
 }
