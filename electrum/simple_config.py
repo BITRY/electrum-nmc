@@ -25,11 +25,11 @@ FEE_DEPTH_TARGETS = [10000000, 5000000, 2000000, 1000000, 500000, 200000, 100000
 FEE_LN_ETA_TARGET = 2  # note: make sure the network is asking for estimates for this target
 
 # satoshi per kbyte
-FEERATE_MAX_DYNAMIC = 1500000
-FEERATE_WARNING_HIGH_FEE = 600000
-FEERATE_FALLBACK_STATIC_FEE = 150000
-FEERATE_DEFAULT_RELAY = 1000
-FEERATE_MAX_RELAY = 50000
+FEERATE_MAX_DYNAMIC = 1000
+FEERATE_WARNING_HIGH_FEE = 500
+FEERATE_FALLBACK_STATIC_FEE = 1
+FEERATE_DEFAULT_RELAY = 1
+FEERATE_MAX_RELAY = 100
 FEERATE_STATIC_VALUES = [1000, 2000, 5000, 10000, 20000, 30000,
                          50000, 70000, 100000, 150000, 200000, 300000]
 FEERATE_REGTEST_HARDCODED = 180000  # for eclair compat
@@ -38,7 +38,7 @@ FEERATE_REGTEST_HARDCODED = 180000  # for eclair compat
 # the resulting onchain tx pays the min relay fee.
 # This would be FEERATE_DEFAULT_RELAY / 4 if not for rounding errors,
 # see https://github.com/ElementsProject/lightning/commit/2e687b9b352c9092b5e8bd4a688916ac50b44af0
-FEERATE_PER_KW_MIN_RELAY_LIGHTNING = 253
+FEERATE_PER_KW_MIN_RELAY_LIGHTNING = 1
 
 FEE_RATIO_HIGH_WARNING = 0.05  # warn user if fee/amount for on-chain tx is higher than this
 
