@@ -13,7 +13,7 @@ jobs:
         run: sudo apt-get update
         
       - name: Install Bitcoin PPA 
-        run: sudo apt-get install libsecp256k1-0 python3-pyqt5 automake libtool python3-cryptography
+        run: sudo apt-get install libsecp256k1-0 python3-pyqt5 automake libtool python3-cryptography python3-setuptools python3-pip
         
       - name: autogen 
         run: ./contrib/make_libsecp256k1.sh
