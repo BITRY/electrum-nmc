@@ -1,7 +1,8 @@
 {
     "electrumxprux02.sytes.net": {
         "pruning": "-",
-        "t": "50001",
+        "t": "50002",
+        "s": "50001",
         "version": "1.4"
     },
     "electrumxprux01.ddns.net": {
