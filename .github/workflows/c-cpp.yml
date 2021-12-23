@@ -20,6 +20,3 @@ jobs:
         
       - name: autogen 
         run: python3 -m pip install --user .
-        
-      - name: make
-        run: ./run_electrum
