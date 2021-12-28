@@ -539,7 +539,7 @@ class Blockchain(Logger):
             new_target = min(MAX_TARGET, (target * nActualTimespan) // nTargetTimespan)
             # not any target can be represented in 32 bits:
             new_target = self.bits_to_target(self.target_to_bits(new_target))
-            return new_target            
+            return t           
         else:
             nActualTimespan = last.get('timestamp') - first.get('timestamp')
             nTargetTimespan = 60 * 6
