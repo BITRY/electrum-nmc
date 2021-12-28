@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# Electrum-NMC - lightweight Namecoin client
-# Copyright (C) 2018 The Namecoin developers
+# Electrum-DOGE - lightweight Dogecoin client
+# Copyright (C) 2018 The Dogecoin developers
 #
 # License for all components not part of Electrum-DOGE:
 #
@@ -62,6 +62,7 @@ MAX_INDEX_PC_BACKWARDS_COMPATIBILITY = 20
 COINBASE_MERGED_MINING_HEADER = bfh('fabe') + b'mm'
 
 BLOCK_VERSION_AUXPOW_BIT = 0x100
+#BLOCK_VERSION_AUXPOW_BIT = 0x000
 
 class AuxPowVerifyError(Exception):
     pass
