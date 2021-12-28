@@ -49,7 +49,7 @@ from . import blockchain
 from .bitcoin import hash_encode, hash_decode
 from . import constants
 from .crypto import sha256d
-# from .merkle import hash_merkle_root
+from .merkle import hash_merkle_root
 from . import transaction
 from .transaction import BCDataStream, Transaction, TxOutput, TYPE_SCRIPT
 from .util import bfh, bh2u
