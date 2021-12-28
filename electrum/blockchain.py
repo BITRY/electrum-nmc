@@ -533,13 +533,14 @@ class Blockchain(Logger):
         # new target
         if height > 15000:
             nActualTimespan = last.get('timestamp') - first.get('timestamp') / 2
+            nTargetTimespan = 60 * 6
+            nActualTimespan = max(nActualTimespan, nTargetTimespan // 4)
+            nActualTimespan = min(nActualTimespan, nTargetTimespan * 4)            
         else:
             nActualTimespan = last.get('timestamp') - first.get('timestamp')
-        
-        nActualTimespan = last.get('timestamp') - first.get('timestamp') 
-        nTargetTimespan = 60 * 6
-        nActualTimespan = max(nActualTimespan, nTargetTimespan // 4)
-        nActualTimespan = min(nActualTimespan, nTargetTimespan * 4)
+            nTargetTimespan = 60 * 6
+            nActualTimespan = max(nActualTimespan, nTargetTimespan // 4)
+            nActualTimespan = min(nActualTimespan, nTargetTimespan * 4)
         new_target = min(MAX_TARGET, (target * nActualTimespan) // nTargetTimespan)
         # not any target can be represented in 32 bits:
         new_target = self.bits_to_target(self.target_to_bits(new_target))
