@@ -530,9 +530,12 @@ class Blockchain(Logger):
         bits = last.get('bits')
         target = self.bits_to_target(bits)
         
+        # new target
         if height > 15000:
-        nActualTimespan = last.get('timestamp') - first.get('timestamp') / 2
+            nActualTimespan = last.get('timestamp') - first.get('timestamp') / 2
         else:
+            nActualTimespan = last.get('timestamp') - first.get('timestamp')
+        
         nActualTimespan = last.get('timestamp') - first.get('timestamp') 
         nTargetTimespan = 60 * 6
         nActualTimespan = max(nActualTimespan, nTargetTimespan // 4)
@@ -541,18 +544,6 @@ class Blockchain(Logger):
         # not any target can be represented in 32 bits:
         new_target = self.bits_to_target(self.target_to_bits(new_target))
         return new_target
-
-    if (pindexLast->nHeight > 15000)
-        // obtain average actual timespan
-        nActualTimespan = (pindexLast->GetBlockTime() - nFirstBlockTime)/nReTargetHistoryFact;
-    else
-        nActualTimespan = pindexLast->GetBlockTime() - nFirstBlockTime;
-    
-    if (nActualTimespan < nTargetTimespan/4)
-        nActualTimespan = nTargetTimespan/4;
-    if (nActualTimespan > nTargetTimespan*4)
-nActualTimespan = nTargetTimespan*4;   
-    
     
     @classmethod
     def bits_to_target(cls, bits: int) -> int:
