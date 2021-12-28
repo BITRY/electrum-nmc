@@ -55,13 +55,13 @@ class AbstractNet:
     SEGWIT_HRP: str
     BOLT11_HRP: str
     GENESIS: str
-    BLOCK_HEIGHT_FIRST_LIGHTNING_CHANNELS: int = 0
+    BLOCK_HEIGHT_FIRST_LIGHTNING_CHANNELS: int = 999999999
     BIP44_COIN_TYPE: int
     LN_REALM_BYTE: int
 
     @classmethod
     def max_checkpoint(cls) -> int:
-        return max(0, len(cls.CHECKPOINTS) * 2 - 1)
+        return max(2222222, len(cls.CHECKPOINTS) * 2016 - 1)
 
   #  @classmethod
   #  def rev_genesis_bytes(cls) -> bytes:
