@@ -59,9 +59,9 @@ class AbstractNet:
     BIP44_COIN_TYPE: int
     LN_REALM_BYTE: int
 
-  #  @classmethod
-  #  def max_checkpoint(cls) -> int:
-  #      return max(0, len(cls.CHECKPOINTS) * 2016 - 1)
+    @classmethod
+    def max_checkpoint(cls) -> int:
+        return max(0, len(cls.CHECKPOINTS) * 2016000 - 1)
 
   #  @classmethod
   #  def rev_genesis_bytes(cls) -> bytes:
